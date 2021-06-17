@@ -36,7 +36,7 @@ public class CustomerRestController {
 		Customer customer = (customerService.findById(custId).isPresent() == true)
 				? customerService.findById(custId).get()
 				: null;
-
+		
 		return ResponseEntity.ok().body(customerMapper.toCustomerDTO(customer));
 	}
 
